@@ -28,12 +28,12 @@ namespace KolmogorovComplexity
                         kMax = k;
                     }
 
-                    i = i + 1;
+                    i++;
 
                     if (i == l)
                     {
-                        complexity = complexity + 1;
-                        l = l + kMax;
+                        complexity++;
+                        l += kMax;
 
                         if (l + 1 >= n)
                         {
@@ -53,10 +53,10 @@ namespace KolmogorovComplexity
                 }
                 else
                 {
-                    k = k + 1;
+                    k++;
                     if (l + k >= n)
                     {
-                        complexity = complexity + 1;
+                        complexity++;
                         stop = 1;
                     }
                 }
